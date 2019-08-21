@@ -1,0 +1,27 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "iamkevinwolf",
+      "name": "Kevin Wolf",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/3157426?v=4",
+      "profile": "https://kevinwolf.me",
+      "contributions": [
+        "code",
+        "content",
+        "doc",
+        "ideas",
+        "infra"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "website",
+  "projectOwner": "reactcostarica",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
