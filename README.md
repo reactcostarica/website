@@ -1,5 +1,4 @@
 <p align="center">
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
   <img src="./src/assets/images/logo.png" />
 </p>
 
@@ -11,7 +10,7 @@
 
 <p align="center">
   <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
-  <a href="#-contributors"><img src="https://img.shields.io/badge/all_contributors-1-blue.svg?style=flat-square" alt="All Contributors" /></a>
+  <a href="#contributors"><img src="https://img.shields.io/badge/all_contributors-1-blue.svg?style=flat-square" alt="All Contributors" /></a>
   <a href="https://travis-ci.org/reactcostarica/website"><img src="https://img.shields.io/travis/reactcostarica/website.svg?style=flat-square" alt="Build Status" /></a>
   <a href="https://greenkeeper.io"><img src="https://badges.greenkeeper.io/reactcostarica/website.svg?style=flat-square" alt="Greenkeeper" /></a>
 </p>
