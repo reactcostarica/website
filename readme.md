@@ -58,4 +58,4 @@
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 ## License
 
-[MIT](./LICENSE)
+[MIT](./license)
