@@ -3,6 +3,7 @@ import { ThemeProvider } from 'emotion-theming'
 import { Global, css } from '@emotion/core'
 import normalize from 'emotion-normalize'
 
+import useViewport from 'hooks/viewport'
 import theme from 'config/theme'
 import Box from 'components/box'
 import Footer from './footer'
@@ -12,6 +13,8 @@ interface AppLayoutProps {
 }
 
 export default function AppLayout({ children }: AppLayoutProps) {
+  const { vh } = useViewport()
+
   return (
     <ThemeProvider theme={theme}>
       <Global
@@ -26,7 +29,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
         `}
       />
       <Box
-        minHeight="100vh"
+        minHeight={vh(100)}
         display="flex"
         flexDirection="column"
         alignItems="center"
