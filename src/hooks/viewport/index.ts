@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function useViewport() {
   const [viewportSize, setViewportSize] = useState(getViewportSize())
@@ -6,7 +6,7 @@ export default function useViewport() {
   const vw = (v: number) => (viewportSize.width * v) / 100
   const vh = (v: number) => (viewportSize.height * v) / 100
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const onResize = () => setViewportSize(getViewportSize())
     window.addEventListener('resize', onResize)
 
