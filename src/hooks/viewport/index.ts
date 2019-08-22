@@ -1,29 +1,29 @@
-import { useState, useEffect } from 'react'
+import { useState, useCallback, useMemo, useLayoutEffect } from 'react'
 
 export default function useViewport() {
-  const [viewportSize, setViewportSize] = useState(getViewportSize())
+  const [viewportSize, setViewportSize] = useState({ width: 0, height: 0 })
+  const { width, height } = viewportSize
 
-  const vw = (v: number) => (viewportSize.width * v) / 100
-  const vh = (v: number) => (viewportSize.height * v) / 100
-
-  useEffect(() => {
-    const onResize = () => setViewportSize(getViewportSize())
-    window.addEventListener('resize', onResize)
-
-    return () => {
-      window.removeEventListener('resize', onResize)
-    }
+  const onResize = useCallback(() => {
+    setViewportSize({ width: window.innerWidth, height: window.innerHeight })
   }, [])
 
-  return {
-    vw,
-    vh,
-  }
-}
+  const vw = useCallback((v: number) => (width * v) / 100, [width])
+  const vh = useCallback((v: number) => (height * v) / 100, [height])
 
-function getViewportSize() {
-  return {
-    width: typeof window === 'undefined' ? 0 : window.innerWidth,
-    height: typeof window === 'undefined' ? 0 : window.innerHeight,
-  }
+  useLayoutEffect(() => {
+    onResize()
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [onResize])
+
+  return useMemo(
+    () => ({
+      width,
+      height,
+      vw,
+      vh,
+    }),
+    [height, vh, vw, width]
+  )
 }
