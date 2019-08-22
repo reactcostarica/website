@@ -1,25 +1,19 @@
 import React from 'react'
-import styled from '@emotion/styled'
+import { ThemeProvider } from 'emotion-theming'
 import { Global, css } from '@emotion/core'
 import normalize from 'emotion-normalize'
 
+import theme from 'config/theme'
+import Box from 'components/box'
 import Footer from './footer'
 
 interface AppLayoutProps {
   children: React.ReactNode
 }
 
-const Container = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 100vh;
-`
-
 export default function AppLayout({ children }: AppLayoutProps) {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Global
         styles={css`
           ${normalize}
@@ -31,10 +25,17 @@ export default function AppLayout({ children }: AppLayoutProps) {
           }
         `}
       />
-      <Container>
+      <Box
+        minHeight="100vh"
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        p={2}
+      >
         {children}
         <Footer />
-      </Container>
-    </>
+      </Box>
+    </ThemeProvider>
   )
 }

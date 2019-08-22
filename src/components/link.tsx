@@ -1,19 +1,19 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import * as system from 'styled-system'
 
 type LinkProps = {
-  primary?: boolean
+  secondary?: boolean
 } & React.DetailedHTMLProps<
   React.AnchorHTMLAttributes<HTMLAnchorElement>,
   HTMLAnchorElement
 >
 
 const StyledLink = styled.a<LinkProps>`
-  border-bottom: 1px transparent dashed;
-  color: ${(props) => (props.primary ? '#53c1de' : '#bebebe')};
+  ${system.color};
+
+  border-bottom: 1px transparent dotted;
   font-size: 18px;
-  margin: 0 16px;
-  padding-bottom: 5px;
   text-decoration: none;
 
   &:hover {
@@ -21,6 +21,6 @@ const StyledLink = styled.a<LinkProps>`
   }
 `
 
-export default function Link(props: LinkProps) {
-  return <StyledLink {...props} />
+export default function Link({ secondary, ...props }: LinkProps) {
+  return <StyledLink color={!secondary ? 'primary' : 'secondary'} {...props} />
 }
