@@ -14,6 +14,7 @@ interface AppLayoutProps {
 
 export default function AppLayout({ children }: AppLayoutProps) {
   const { vh } = useViewport()
+  const viewportHeight = vh(100)
 
   return (
     <ThemeProvider theme={theme}>
@@ -29,11 +30,12 @@ export default function AppLayout({ children }: AppLayoutProps) {
         `}
       />
       <Box
-        minHeight={vh(100)}
+        minHeight={viewportHeight}
         display="flex"
         flexDirection="column"
         alignItems="center"
         justifyContent="center"
+        opacity={viewportHeight === 0 ? 0 : 1}
         p={2}
       >
         {children}

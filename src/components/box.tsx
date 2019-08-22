@@ -5,6 +5,7 @@ type BoxProps = system.BackgroundColorProps &
   system.BorderProps &
   system.FlexboxProps &
   system.LayoutProps &
+  system.OpacityProps &
   system.SpaceProps
 
 export default styled.div<BoxProps>`
