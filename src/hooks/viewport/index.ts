@@ -23,7 +23,7 @@ export default function useViewport() {
 
 function getViewportSize() {
   return {
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: typeof window === 'undefined' ? 0 : window.innerWidth,
+    height: typeof window === 'undefined' ? 0 : window.innerHeight,
   }
 }
