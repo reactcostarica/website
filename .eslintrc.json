@@ -1,0 +1,14 @@
+{
+  "extends": "@kevinwolf",
+  "overrides": [
+    {
+      "files": ["!src/**"],
+      "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          { "devDependencies": true }
+        ]
+      }
+    }
+  ]
+}
