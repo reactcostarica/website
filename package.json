@@ -17,15 +17,18 @@
     "@emotion/core": "^10.0.16",
     "@emotion/styled": "^10.0.15",
     "emotion-normalize": "^10.1.0",
+    "emotion-theming": "^10.0.14",
     "gatsby": "2.13.70",
     "gatsby-image": "^2.2.9",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "styled-system": "^5.1.0"
   },
   "devDependencies": {
     "@kevinwolf/eslint-config": "^0.2.3",
     "@types/react-helmet": "^5.0.9",
+    "@types/styled-system": "^5.1.0",
     "doctoc": "^1.4.0",
     "dotenv": "^8.1.0",
     "eslint": "^6.2.1",
