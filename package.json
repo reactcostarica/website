@@ -17,7 +17,7 @@
     "@emotion/core": "^10.0.16",
     "@emotion/styled": "^10.0.15",
     "emotion-normalize": "^10.1.0",
-    "gatsby": "^2.13.70",
+    "gatsby": "2.13.70",
     "gatsby-image": "^2.2.9",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
