@@ -11,6 +11,7 @@ import Footer from './footer'
 interface LayoutProps {
   path: string
   children: React.ReactNode
+  location: Location
 }
 
 const useStyles = makeStyles(() => ({
@@ -27,10 +28,12 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function Layout({ path, children }: LayoutProps) {
+export default function Layout({ path, children, location }: LayoutProps) {
   const styles = useStyles()
   const { vh } = useViewport()
   const viewportHeight = vh(100)
+  // https://github.com/gatsbyjs/gatsby/issues/13867#issuecomment-489481343
+  if (location.pathname === '/offline-plugin-app-shell-fallback/') return null
 
   const containerVariants = {
     hidden: { opacity: 0 },

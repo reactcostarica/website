@@ -8,10 +8,17 @@ const plugins = {
   typescript: 'gatsby-plugin-typescript',
   resolveSrc: 'gatsby-plugin-resolve-src',
   helmet: 'gatsby-plugin-react-helmet',
-  material: 'gatsby-plugin-material-ui',
+  offline: 'gatsby-plugin-offline',
+  material: {
+    resolve: 'gatsby-plugin-material-ui',
+    options: {
+      stylesProvider: {
+        injectFirst: true,
+      },
+    },
+  },
   sharp: 'gatsby-plugin-sharp',
   sharpTransformer: 'gatsby-transformer-sharp',
-  offline: 'gatsby-plugin-offline',
   manifest: {
     resolve: 'gatsby-plugin-manifest',
     options: {
