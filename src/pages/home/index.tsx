@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Box from '@material-ui/core/Box'
+import Typography from '@material-ui/core/Typography'
 
 import SEO from 'components/seo'
 
@@ -25,7 +26,9 @@ export default function HomePage() {
       <Box width="100%" maxWidth={512}>
         <Img fluid={logo.placeholderImage.childImageSharp.fluid} />
       </Box>
-      <h1>Próximamente</h1>
+      <Typography variant="h6" component="h2">
+        Próximamente...
+      </Typography>
     </>
   )
 }
