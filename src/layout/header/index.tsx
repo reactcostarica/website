@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography'
 import Link from 'components/link'
 
 import Logo from './logo'
+import Nav from './nav'
 
 const useStyles = makeStyles((theme: Theme) => ({
   topSpacer: theme.mixins.toolbar,
@@ -22,16 +23,19 @@ export default function Header() {
     <>
       <AppBar elevation={3} color="inherit">
         <Toolbar>
-          <Link to="/" color="inherit" underline="none">
-            <Box display="flex">
-              <Logo />
-              <Box mx={2}>
-                <Typography variant="h6" component="h1">
-                  React Costa Rica
-                </Typography>
+          <Box flex="auto">
+            <Link to="/" color="inherit" underline="none">
+              <Box display="flex">
+                <Logo />
+                <Box mx={2}>
+                  <Typography variant="h6" component="h1">
+                    React Costa Rica
+                  </Typography>
+                </Box>
               </Box>
-            </Box>
-          </Link>
+            </Link>
+          </Box>
+          <Nav />
         </Toolbar>
       </AppBar>
 
