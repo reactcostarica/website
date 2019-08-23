@@ -11,6 +11,7 @@ export default function Footer() {
       display="flex"
       flexDirection="column"
       alignItems="center"
+      p={4}
     >
       <Box component="nav" display="flex" my={2} alignItems="center">
         <Link href="https://github.com/reactcostarica">GitHub</Link>

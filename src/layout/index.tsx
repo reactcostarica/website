@@ -1,44 +1,79 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-
-import Box from '@material-ui/core/Box'
+import { motion, AnimatePresence } from 'framer-motion'
+import { makeStyles } from '@material-ui/core'
 
 import useViewport from 'hooks/viewport'
 
 import Theme from './theme'
+import Header from './header'
 import Footer from './footer'
 
 interface LayoutProps {
   children: React.ReactNode
 }
 
-export default function Layout({ children }: LayoutProps) {
+const useStyles = makeStyles(() => ({
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  content: {
+    alignItems: 'center',
+    display: 'flex',
+    flex: 'auto',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+}))
+
+export default function Layout({ path, children }: LayoutProps) {
+  const styles = useStyles()
   const { vh } = useViewport()
   const viewportHeight = vh(100)
 
-  const variants = {
-    hidden: { opacity: 0, scale: 0.5 },
-    visible: { opacity: 1, scale: 1 },
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  }
+
+  const headerVariants = {
+    hidden: { y: -10 },
+    visible: { y: 0 },
+  }
+
+  const footerVariants = {
+    hidden: { y: 10 },
+    visible: { y: 0 },
   }
 
   return (
     <Theme>
       <motion.div
-        variants={variants}
+        variants={containerVariants}
         initial="hidden"
         animate={!viewportHeight ? 'hidden' : 'visible'}
+        className={styles.container}
+        style={{ minHeight: viewportHeight }}
       >
-        <Box
-          minHeight={viewportHeight}
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
-          p={2}
-        >
-          {children}
+        <motion.div variants={headerVariants}>
+          <Header />
+        </motion.div>
+
+        <AnimatePresence exitBeforeEnter initial={false}>
+          <motion.div
+            key={path}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            className={styles.content}
+          >
+            {children}
+          </motion.div>
+        </AnimatePresence>
+
+        <motion.div variants={footerVariants}>
           <Footer />
-        </Box>
+        </motion.div>
       </motion.div>
     </Theme>
   )
