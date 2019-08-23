@@ -9,6 +9,7 @@ import Header from './header'
 import Footer from './footer'
 
 interface LayoutProps {
+  path: string
   children: React.ReactNode
 }
 
