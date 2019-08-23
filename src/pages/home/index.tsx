@@ -1,14 +1,10 @@
 import React from 'react'
-import styled from '@emotion/styled'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import SEO from 'components/seo'
+import Box from '@material-ui/core/Box'
 
-const Logo = styled(Img)`
-  max-width: 512px;
-  width: 100%;
-`
+import SEO from 'components/seo'
 
 export default function HomePage() {
   const logo = useStaticQuery(graphql`
@@ -16,7 +12,7 @@ export default function HomePage() {
       placeholderImage: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 512) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
@@ -26,7 +22,9 @@ export default function HomePage() {
   return (
     <>
       <SEO title="Inicio" />
-      <Logo fluid={logo.placeholderImage.childImageSharp.fluid} />
+      <Box width="100%" maxWidth={512}>
+        <Img fluid={logo.placeholderImage.childImageSharp.fluid} />
+      </Box>
       <h1>Próximamente</h1>
     </>
   )
