@@ -7,10 +7,10 @@ const fromSrc = (...p) => fromRoot('src', ...p)
 const plugins = {
   typescript: 'gatsby-plugin-typescript',
   resolveSrc: 'gatsby-plugin-resolve-src',
-  sharpTransformer: 'gatsby-transformer-sharp',
-  sharp: 'gatsby-plugin-sharp',
   helmet: 'gatsby-plugin-react-helmet',
-  emotion: 'gatsby-plugin-emotion',
+  material: 'gatsby-plugin-material-ui',
+  sharp: 'gatsby-plugin-sharp',
+  sharpTransformer: 'gatsby-transformer-sharp',
   offline: 'gatsby-plugin-offline',
   manifest: {
     resolve: 'gatsby-plugin-manifest',
@@ -24,6 +24,12 @@ const plugins = {
       icon: fromSrc('assets/images/logo.png'),
     },
   },
+  layout: {
+    resolve: 'gatsby-plugin-layout',
+    options: {
+      component: fromSrc('layout'),
+    },
+  },
   images: {
     resolve: 'gatsby-source-filesystem',
     options: {
@@ -31,23 +37,17 @@ const plugins = {
       path: fromSrc('assets/images'),
     },
   },
-  layout: {
-    resolve: 'gatsby-plugin-layout',
-    options: {
-      component: fromSrc('layouts/app/index.tsx'),
-    },
-  },
 }
 
 module.exports = [
   plugins.typescript,
   plugins.resolveSrc,
-  plugins.sharpTransformer,
-  plugins.sharp,
-  plugins.helmet,
-  plugins.emotion,
   plugins.manifest,
-  plugins.images,
+  plugins.helmet,
   plugins.layout,
+  plugins.material,
+  plugins.sharp,
+  plugins.sharpTransformer,
+  plugins.images,
   plugins.offline,
 ]

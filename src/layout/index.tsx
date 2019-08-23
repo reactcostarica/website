@@ -1,16 +1,18 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+import Box from '@material-ui/core/Box'
+
 import useViewport from 'hooks/viewport'
-import Theme from 'components/theme'
-import Box from 'components/box'
+
+import Theme from './theme'
 import Footer from './footer'
 
-interface AppLayoutProps {
+interface LayoutProps {
   children: React.ReactNode
 }
 
-export default function AppLayout({ children }: AppLayoutProps) {
+export default function Layout({ children }: LayoutProps) {
   const { vh } = useViewport()
   const viewportHeight = vh(100)
 
