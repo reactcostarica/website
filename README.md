@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
-  <a href="#contributors"><img src="https://img.shields.io/badge/all_contributors-1-blue.svg?style=flat-square" alt="All Contributors" /></a>
+  <a href="#contributors"><img src="https://img.shields.io/badge/all_contributors-2-blue.svg?style=flat-square" alt="All Contributors" /></a>
   <a href="https://travis-ci.org/reactcostarica/website"><img src="https://img.shields.io/travis/reactcostarica/website.svg?style=flat-square" alt="Build Status" /></a>
   <a href="https://greenkeeper.io"><img src="https://badges.greenkeeper.io/reactcostarica/website.svg?style=flat-square" alt="Greenkeeper" /></a>
 </p>
@@ -52,6 +52,7 @@
 <table>
   <tr>
     <td align="center"><a href="https://kevinwolf.me"><img src="https://avatars2.githubusercontent.com/u/3157426?v=4" width="100px;" alt="Kevin Wolf"/><br /><sub><b>Kevin Wolf</b></sub></a><br /><a href="https://github.com/reactcostarica/website/commits?author=iamkevinwolf" title="Code">💻</a> <a href="#content-iamkevinwolf" title="Content">🖋</a> <a href="https://github.com/reactcostarica/website/commits?author=iamkevinwolf" title="Documentation">📖</a> <a href="#ideas-iamkevinwolf" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-iamkevinwolf" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="http://kevinrodriguez.io/"><img src="https://avatars3.githubusercontent.com/u/6248571?v=4" width="100px;" alt="Kevin Rodríguez"/><br /><sub><b>Kevin Rodríguez</b></sub></a><br /><a href="https://github.com/reactcostarica/website/issues?q=author%3Akevinrodriguez-io" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
