@@ -17,6 +17,15 @@
         "ideas",
         "infra"
       ]
+    },
+    {
+      "login": "kevinrodriguez-io",
+      "name": "Kevin Rodríguez",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6248571?v=4",
+      "profile": "http://kevinrodriguez.io/",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
