@@ -53,6 +53,7 @@
   <tr>
     <td align="center"><a href="https://kevinwolf.me"><img src="https://avatars2.githubusercontent.com/u/3157426?v=4" width="100px;" alt="Kevin Wolf"/><br /><sub><b>Kevin Wolf</b></sub></a><br /><a href="https://github.com/reactcostarica/website/commits?author=iamkevinwolf" title="Code">💻</a> <a href="#content-iamkevinwolf" title="Content">🖋</a> <a href="https://github.com/reactcostarica/website/commits?author=iamkevinwolf" title="Documentation">📖</a> <a href="#ideas-iamkevinwolf" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-iamkevinwolf" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
     <td align="center"><a href="http://kevinrodriguez.io/"><img src="https://avatars3.githubusercontent.com/u/6248571?v=4" width="100px;" alt="Kevin Rodríguez"/><br /><sub><b>Kevin Rodríguez</b></sub></a><br /><a href="https://github.com/reactcostarica/website/issues?q=author%3Akevinrodriguez-io" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/guayom"><img src="https://avatars3.githubusercontent.com/u/3279037?v=4" width="100px;" alt="Guayo Mena"/><br /><sub><b>Guayo Mena</b></sub></a><br /><a href="https://github.com/reactcostarica/website/issues?q=author%3Aguayom" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
