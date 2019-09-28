@@ -37,6 +37,7 @@ const plugins = {
       path: fromSrc('assets/images'),
     },
   },
+  serviceworker: 'gatsby-plugin-remove-serviceworker',
 }
 
 module.exports = [
@@ -50,4 +51,5 @@ module.exports = [
   plugins.sharpTransformer,
   plugins.images,
   plugins.offline,
+  plugins.serviceworker,
 ]

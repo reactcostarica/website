@@ -26,6 +26,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "guayom",
+      "name": "Guayo Mena",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/3279037?v=4",
+      "profile": "https://github.com/guayom",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
