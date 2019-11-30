@@ -31,7 +31,7 @@
     "@types/styled-system": "^5.1.0",
     "doctoc": "^1.4.0",
     "dotenv": "^8.1.0",
-    "eslint": "6.2.1",
+    "eslint": "6.7.2",
     "gatsby-plugin-layout": "^1.1.4",
     "gatsby-plugin-manifest": "^2.2.5",
     "gatsby-plugin-material-ui": "^2.1.5",
