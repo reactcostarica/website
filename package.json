@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@kevinwolf/eslint-config": "^0.2.3",
-    "@types/react-helmet": "5.0.10",
+    "@types/react-helmet": "6.0.0",
     "@types/styled-system": "^5.1.0",
     "doctoc": "^1.4.0",
     "dotenv": "^8.1.0",
